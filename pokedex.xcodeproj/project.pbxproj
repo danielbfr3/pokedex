@@ -28,7 +28,7 @@
 		657DA9721D1384170046200E /* PokeCellCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		657DA9761D148E520046200E /* csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = csv.swift; sourceTree = "<group>"; };
 		657DA97E1D14A98B0046200E /* Pokemon Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon Solid.ttf"; sourceTree = "<group>"; };
-		65B04D961D136E44006BA47B /* pokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pokedex.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		65B04D961D136E44006BA47B /* Pokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokedex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65B04D991D136E44006BA47B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65B04D9B1D136E44006BA47B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		65B04D9E1D136E44006BA47B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -112,7 +112,7 @@
 		65B04D971D136E44006BA47B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				65B04D961D136E44006BA47B /* pokedex.app */,
+				65B04D961D136E44006BA47B /* Pokedex.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,7 +150,7 @@
 			);
 			name = pokedex;
 			productName = pokedex;
-			productReference = 65B04D961D136E44006BA47B /* pokedex.app */;
+			productReference = 65B04D961D136E44006BA47B /* Pokedex.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -331,7 +331,7 @@
 				INFOPLIST_FILE = pokedex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielfreire.pokedex;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Pokedex;
 			};
 			name = Debug;
 		};
@@ -342,7 +342,7 @@
 				INFOPLIST_FILE = pokedex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielfreire.pokedex;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Pokedex;
 			};
 			name = Release;
 		};

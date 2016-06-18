@@ -28,6 +28,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         parsePokemonCVS()
         playMusic()
+        
+        searchBar.returnKeyType = UIReturnKeyType.Done
+        
     }
     
     // MARK: Delegate and Datasource Functions
@@ -53,9 +56,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if inSearchMode {
             return filteredPokemon.count
-        } else {
-            return pokemon.count
         }
+        
+        return pokemon.count
     }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -69,6 +72,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
         if searchBar.text == "" || searchBar.text == nil {
             inSearchMode = false
+            collectionView.reloadData()
+            view.endEditing(true)
         } else {
             inSearchMode = true
             let lowerCaseSearchContent = searchBar.text!.lowercaseString
@@ -76,6 +81,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             filteredPokemon = pokemon.filter({ $0.name.rangeOfString(lowerCaseSearchContent) != nil })
             collectionView.reloadData()
         }
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        view.endEditing(true)
     }
     
     // MARK: Local function

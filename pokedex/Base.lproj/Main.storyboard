@@ -29,16 +29,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lgI-lL-Wka">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokedex" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1Q-1c-HdB">
-                                        <rect key="frame" x="206" y="7" width="188" height="47"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="188" id="KUE-gR-em1"/>
-                                            <constraint firstAttribute="height" constant="47" id="rRh-DW-zDW"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="33"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cov-T6-k2x">
                                         <rect key="frame" x="554" y="16" width="38" height="38"/>
                                         <constraints>
@@ -50,6 +40,16 @@
                                             <action selector="onMusicButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WM0-1Z-Dnf"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokedex" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1Q-1c-HdB">
+                                        <rect key="frame" x="206" y="7" width="188" height="47"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="188" id="KUE-gR-em1"/>
+                                            <constraint firstAttribute="height" constant="47" id="rRh-DW-zDW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="33"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -257,25 +257,55 @@
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="101" translatesAutoresizingMaskIntoConstraints="NO" id="dee-BG-pHN">
                                                 <rect key="frame" x="0.0" y="0.0" width="120" height="138"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="120" id="5lT-zj-ASa"/>
-                                                    <constraint firstAttribute="height" constant="120" id="Eam-h5-KPn"/>
+                                                    <constraint firstAttribute="width" constant="120" id="5lT-zj-ASa">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="height" constant="120" id="Eam-h5-KPn">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                                                    </constraint>
                                                 </constraints>
+                                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="0.0" width="104" height="142"/>
+                                                    <mask key="constraints">
+                                                        <exclude reference="5lT-zj-ASa"/>
+                                                        <exclude reference="Eam-h5-KPn"/>
+                                                    </mask>
+                                                </variation>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="90L-Mt-Ijy">
                                                 <rect key="frame" x="120" y="0.0" width="440" height="138"/>
                                                 <string key="text">A franquia começou com um par de jogos lançados para o Game Boy original, desenvolvidos pela Game Freak e publicados pela Nintendo. Atualmente, a franquia se estende em jogos, cartas colecionáveis, série de televisão, além de filmes, mangás e brinquedos. Pokémon é a segunda franquia de mídia de jogos mais bem sucedida e lucrativa do mundo, atrás da franquia de Mario que também pertence a Nintendo.[5]</string>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                    <rect key="frame" x="104" y="0.0" width="656" height="142"/>
+                                                </variation>
                                             </label>
                                         </subviews>
+                                        <variation key="heightClass=regular-widthClass=regular" distribution="fillProportionally" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="59" width="760" height="142"/>
+                                        </variation>
                                     </stackView>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fdg-eX-fAa">
                                         <rect key="frame" x="0.0" y="187" width="560" height="20"/>
                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="a6V-d5-ue2"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="tDV-yj-QZa"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="tDV-yj-QZa"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="231" width="760" height="116"/>
+                                            <mask key="constraints">
+                                                <include reference="tDV-yj-QZa"/>
+                                            </mask>
+                                        </variation>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="7Sy-Yn-dpq">
                                         <rect key="frame" x="0.0" y="217" width="560" height="29"/>
@@ -374,6 +404,7 @@
                                         </constraints>
                                     </stackView>
                                 </subviews>
+                                <variation key="heightClass=regular-widthClass=regular" spacing="30"/>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

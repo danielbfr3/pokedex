@@ -32,39 +32,93 @@ class Pokemon {
     }
     
     var description: String {
-        return _description
+        get {
+            if _description == nil {
+                return ""
+            } else {
+                return _description
+            }
+        }
     }
     
     var type: String {
-        return _type
+        get {
+            if _type == nil {
+                return ""
+            } else {
+                return _type
+            }
+        }
     }
     
     var defense: String {
-        return _defense
+        get {
+            if _defense == nil {
+                return ""
+            } else {
+                return _defense
+            }
+        }
     }
     
     var height: String {
-        return _height
+        get {
+            if _height == nil {
+                return ""
+            } else {
+                return _height
+            }
+        }
     }
     
     var weight: String {
-        return _weight
+        get {
+            if _weight == nil {
+                return ""
+            } else {
+                return _weight
+            }
+        }
     }
     
     var attack: String {
-        return _attack
+        get {
+            if _attack == nil {
+                return ""
+            } else {
+                return _attack
+            }
+        }
     }
     
     var nextEvolutionText: String {
-        return _nextEvolutionText
+        get {
+            if _nextEvolutionText == nil {
+                return ""
+            } else {
+                return _nextEvolutionText
+            }
+        }
     }
     
     var nextEvolutionId: String {
-        return _nextEvolutionId
+        get {
+            if _nextEvolutionId == nil {
+                return ""
+            } else {
+                return _nextEvolutionId
+            }
+        }
     }
     
     var nextEvolutionLevel: String {
-        return _nextEvolutionLevel
+        get {
+            if _nextEvolutionLevel == nil {
+                return ""
+            } else {
+                return _nextEvolutionLevel
+            }
+        }
     }
     
     init(name: String, pokedexId: Int) {
@@ -128,6 +182,8 @@ class Pokemon {
                                     self._description = pokemonDescription
                                 }
                             }
+                            
+                            completed()
                         }
                     } else {
                         self._description = ""
@@ -152,16 +208,10 @@ class Pokemon {
                                 if let lvl = evolutions[0]["level"] as? Int {
                                     self._nextEvolutionLevel = "\(lvl)"
                                 }
-                                
-                                print(" \(self._nextEvolutionLevel) \(self._nextEvolutionText) \(self._nextEvolutionId) ")
-                                
                             }
                         }
-                        
                     }
-                    
                 }
-                
             }
         }
     }
